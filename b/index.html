@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mélure｜一日を、ほどく水。</title>
+<meta name="description" content="mélure（メリュール）は、夜のためのスキンケア。洗顔ジェル、化粧水、美容液、クリーム。4つの手順で一日を終える。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0D1115; --deep:#141A20; --frost:#E6EBEF; --dim:#8894A0; --ice:#BCD0DD; --line:#27303A;
+  --jp:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --en:"Jost","Zen Kaku Gothic New",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--frost);font-family:var(--jp);font-weight:300;font-size:15px;line-height:2;letter-spacing:.06em;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:1px solid var(--ice);outline-offset:4px}
+.en{font-family:var(--en);text-transform:uppercase;letter-spacing:.3em;font-weight:300}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+.head{position:fixed;inset:0 0 auto 0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:linear-gradient(rgba(13,17,21,.85),rgba(13,17,21,0))}
+.logo{font-family:var(--en);font-weight:300;font-size:20px;letter-spacing:.2em;text-decoration:none}
+.head .time{font-family:var(--en);font-size:12px;letter-spacing:.24em;color:var(--ice)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;height:100%;object-fit:cover;object-position:50% 40%;filter:brightness(.6) saturate(.8) contrast(1.08)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(13,17,21,.25) 0%,rgba(13,17,21,0) 35%,rgba(13,17,21,.7) 72%,var(--night) 100%)}
+.hero-copy{position:relative;z-index:1;padding:0 24px 48px}
+.hero .word{font-family:var(--en);font-weight:200;font-size:clamp(64px,21vw,230px);line-height:.9;letter-spacing:-.01em;margin-left:-.04em}
+.hero h1{font-weight:400;font-size:clamp(20px,5.4vw,30px);letter-spacing:.2em;margin-top:22px}
+.hero p{color:var(--dim);font-size:13px;margin-top:8px}
+.btn{display:inline-flex;align-items:center;gap:14px;margin-top:28px;padding:14px 26px;border:1px solid var(--ice);border-radius:99px;color:var(--ice);font-family:var(--en);font-size:12px;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;transition:background .3s,color .3s}
+.btn:hover{background:var(--ice);color:var(--night)}
+
+/* concept */
+.concept{padding:96px 0}
+.concept .en{color:var(--ice);font-size:11px}
+.concept h2{font-weight:400;font-size:clamp(22px,6vw,36px);line-height:1.7;letter-spacing:.14em;margin:18px 0 28px}
+.concept p{color:#B9C2CB;max-width:30em;margin-bottom:1.2em}
+
+/* steps */
+.steps{border-top:1px solid var(--line)}
+.step{border-bottom:1px solid var(--line);padding:48px 0}
+.step .in{display:grid;gap:24px}
+.step .num{font-family:var(--en);font-weight:200;font-size:72px;line-height:1;color:var(--ice)}
+.step .verb{font-size:12px;letter-spacing:.3em;color:var(--dim);margin-top:6px}
+.step figure{background:var(--deep);overflow:hidden}
+.step figure img{aspect-ratio:4/5;object-fit:cover;filter:brightness(.78) saturate(.85) contrast(1.06);transition:filter .6s,transform 1.2s}
+.step:hover figure img{filter:brightness(.95) saturate(.9);transform:scale(1.03)}
+.step h3{font-family:var(--en);font-weight:300;text-transform:uppercase;letter-spacing:.22em;font-size:22px;line-height:1.4}
+.step .jp{font-size:12px;color:var(--dim);letter-spacing:.2em}
+.step .lead{font-size:18px;font-weight:400;letter-spacing:.14em;margin:16px 0 6px}
+.step .txt{color:#B9C2CB;font-size:14px}
+.step ul{list-style:none;padding:0;margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.step li{font-size:11px;letter-spacing:.14em;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:2px 14px}
+
+/* info */
+.info{padding-block:110px;text-align:center}
+.info .en{font-size:11px;color:var(--ice)}
+.info h2{font-family:var(--en);font-weight:200;font-size:clamp(40px,12vw,96px);letter-spacing:.02em;line-height:1.1;margin:14px 0 20px}
+.info p{color:var(--dim);font-size:13px}
+footer{border-top:1px solid var(--line);padding:28px 24px 44px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--dim)}
+
+@media(min-width:768px){
+  body{font-size:16px}
+  .head{padding:24px 48px}
+  .wrap{padding:0 48px}
+  .hero-copy{padding:0 48px 72px}
+  .concept{padding:160px 0}
+  .concept .wrap{display:grid;grid-template-columns:200px 1fr;gap:40px}
+  .step{padding:96px 0}
+  .step .in{grid-template-columns:160px minmax(0,360px) 1fr;gap:56px;align-items:end}
+  .step .num{font-size:120px}
+  .step h3{font-size:28px}
+  .info{padding-block:180px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero img{animation:wake 3s ease both}
+  .hero-copy{animation:up 1.4s .5s ease both}
+  @keyframes wake{from{filter:brightness(.15) saturate(.6)}}
+  @keyframes up{from{opacity:0;transform:translateY(20px)}}
+}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <a class="logo" href="#top">mélure</a>
+  <span class="time">after 22:00</span>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img src="../images/hero.webp" width="1402" height="1122" alt="mélure の4つの容器。美容液、化粧水、クリーム、洗顔ジェルが並ぶ">
+    <div class="hero-copy">
+      <p class="word" aria-hidden="true">mélure</p>
+      <h1>一日を、ほどく水。</h1>
+      <p>夜、洗面台の前の数分のために。</p>
+      <a class="btn" href="#steps">4 steps <span aria-hidden="true">↓</span></a>
+    </div>
+  </section>
+
+  <section class="concept">
+    <div class="wrap">
+      <p class="en">concept</p>
+      <div>
+        <h2>がんばった顔を、<br>水にかえす。</h2>
+        <p>帰ってきて、明かりを少し落とす。蛇口をひねる。</p>
+        <p>mélure は、その数分を「作業」から「自分の時間」に変えるためのスキンケアです。手順は4つだけ。迷わない順番で、並べておけます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" id="steps">
+    <article class="step"><div class="wrap in">
+      <div><p class="num">01</p><p class="verb">落とす</p></div>
+      <figure><img src="../images/gel.webp" alt="cleansing gel の半透明のチューブ" loading="lazy"></figure>
+      <div>
+        <h3>cleansing gel</h3><p class="jp">洗顔ジェル</p>
+        <p class="lead">今日を、おろす。</p>
+        <p class="txt">肌の汚れを落とすジェル。ここから夜がはじまります。</p>
+        <ul><li>容量 準備中</li><li>価格 準備中</li></ul>
+      </div>
+    </div></article>
+
+    <article class="step"><div class="wrap in">
+      <div><p class="num">02</p><p class="verb">与える</p></div>
+      <figure><img src="../images/lotion.webp" alt="skin lotion の背の高いポンプボトル。中に細かな泡が見える" loading="lazy"></figure>
+      <div>
+        <h3>skin lotion</h3><p class="jp">化粧水</p>
+        <p class="lead">水を、のませる。</p>
+        <p class="txt">洗顔後の肌に水分を与える化粧水。ポンプを押して、手のひらで。</p>
+        <ul><li>容量 準備中</li><li>価格 準備中</li></ul>
+      </div>
+    </div></article>
+
+    <article class="step"><div class="wrap in">
+      <div><p class="num">03</p><p class="verb">満たす</p></div>
+      <figure><img src="../images/serum.webp" alt="serum の小さなボトル" loading="lazy"></figure>
+      <div>
+        <h3>serum</h3><p class="jp">美容液</p>
+        <p class="lead">ひとしずく、深く。</p>
+        <p class="txt">肌にうるおいを与える美容液。いちばん小さくて、いちばん静かなボトル。</p>
+        <ul><li>容量 準備中</li><li>価格 準備中</li></ul>
+      </div>
+    </div></article>
+
+    <article class="step"><div class="wrap in">
+      <div><p class="num">04</p><p class="verb">保つ</p></div>
+      <figure><img src="../images/cream.webp" alt="cream の丸い容器" loading="lazy"></figure>
+      <div>
+        <h3>cream</h3><p class="jp">保湿クリーム</p>
+        <p class="lead">ふたをして、おやすみ。</p>
+        <p class="txt">肌のうるおいを保つクリーム。これで今日はおしまい。</p>
+        <ul><li>容量 準備中</li><li>価格 準備中</li></ul>
+      </div>
+    </div></article>
+  </section>
+
+  <section class="info wrap">
+    <p class="en">information</p>
+    <h2>coming soon</h2>
+    <p>発売日・価格・取扱店は、ただいま準備中です。</p>
+  </section>
+</main>
+
+<footer>
+  <span>mélure</span>
+  <span>このページは架空ブランドのデモサイトです。</span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mélure｜澄んでいく、という手入れ。</title>
+<meta name="description" content="mélure（メリュール）は、水のように静かなスキンケア。洗顔ジェル、化粧水、美容液、クリームの4つ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ice:#EEF1F4; --paper:#F7F8FA; --ink:#2B3138; --mist:#7C8C9C; --line:#CFD6DD;
+  --jp:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --en:"Cormorant Garamond","Shippori Mincho",serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ice);color:var(--ink);font-family:var(--jp);font-size:15px;line-height:2.1;letter-spacing:.08em;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+.en{font-family:var(--en);letter-spacing:.22em;font-weight:300}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* header */
+.head{position:absolute;inset:0 0 auto 0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:20px 24px}
+.logo{font-family:var(--en);font-size:24px;letter-spacing:.28em;text-decoration:none;font-weight:300}
+.head nav a{font-family:var(--en);font-size:13px;letter-spacing:.2em;text-decoration:none;margin-left:20px;padding:10px 0;border-bottom:1px solid transparent}
+.head nav a:hover{border-color:var(--ink)}
+
+/* hero */
+.hero{position:relative;padding:96px 24px 56px;background:linear-gradient(#E3E8ED,var(--ice))}
+.hero-in{max-width:1080px;margin:0 auto;display:grid;gap:36px}
+.hero figure{position:relative}
+.hero figure img{aspect-ratio:5/4;object-fit:cover}
+.hero h1{font-weight:400;font-size:clamp(26px,7vw,40px);line-height:1.9;letter-spacing:.24em}
+.hero p{margin-top:20px;color:var(--mist);font-size:14px}
+.more{display:inline-block;margin-top:32px;font-family:var(--en);letter-spacing:.24em;font-size:14px;text-decoration:none;padding:6px 0 10px;border-bottom:1px solid var(--ink)}
+.more::after{content:"";display:inline-block;width:28px;height:1px;background:var(--ink);vertical-align:middle;margin-left:14px;transition:width .4s}
+.more:hover::after{width:48px}
+
+/* concept */
+.concept{padding:96px 0;background:var(--paper);text-align:center}
+.concept .en{color:var(--mist);font-size:13px}
+.concept h2{font-weight:400;font-size:20px;letter-spacing:.2em;margin:20px 0 36px}
+.concept p{max-width:26em;margin:0 auto 1.6em;text-align:left}
+.drop{width:1px;height:64px;background:var(--line);margin:0 auto 40px}
+
+/* products */
+.items{padding-block:96px 40px}
+.items>header{text-align:center;margin-bottom:64px}
+.items>header .en{font-size:28px;letter-spacing:.3em}
+.items>header p{color:var(--mist);font-size:13px}
+.item{display:grid;grid-template-columns:42% 1fr;gap:28px;align-items:center;margin-bottom:80px}
+.item:nth-child(odd){grid-template-columns:1fr 42%}
+.item:nth-child(odd) figure{order:2}
+.item figure{background:#DCE2E8}
+.item figure img{aspect-ratio:3/4;object-fit:cover}
+.item .no{font-family:var(--en);font-style:italic;color:var(--mist);font-size:15px;letter-spacing:.1em}
+.item h3{font-family:var(--en);font-weight:300;font-size:21px;letter-spacing:.14em;line-height:1.4;margin:4px 0 2px}
+.item .jp{font-size:12px;color:var(--mist);letter-spacing:.2em}
+.item .lead{font-size:17px;letter-spacing:.2em;margin:18px 0 8px}
+.item .txt{font-size:13.5px;line-height:2}
+.item dl{margin-top:16px;font-size:12px;color:var(--mist);border-top:1px solid var(--line);padding-top:10px;display:flex;gap:18px;flex-wrap:wrap}
+.item dl div{display:flex;gap:8px}
+
+/* ritual */
+.ritual{background:var(--paper);padding:88px 0}
+.ritual h2{font-weight:400;font-size:19px;letter-spacing:.24em;text-align:center;margin-bottom:48px}
+.ritual ol{list-style:none;padding:0;max-width:520px;margin:0 auto}
+.ritual li{display:grid;grid-template-columns:64px 1fr;padding:18px 0;border-top:1px solid var(--line);align-items:baseline}
+.ritual li:last-child{border-bottom:1px solid var(--line)}
+.ritual b{font-family:var(--en);font-weight:300;font-style:italic;color:var(--mist);font-size:18px}
+.ritual span{display:block;font-size:12px;color:var(--mist)}
+
+/* info */
+.info{padding-block:96px;text-align:center}
+.info .en{font-size:28px;letter-spacing:.3em}
+.info p{margin-top:20px;font-size:13.5px}
+.info .box{display:inline-block;margin-top:32px;padding:18px 32px;border:1px solid var(--ink);font-size:13px;letter-spacing:.2em}
+footer{border-top:1px solid var(--line);padding:32px 24px 48px;text-align:center;font-size:11px;color:var(--mist)}
+footer .logo{display:block;color:var(--ink);margin-bottom:12px}
+
+@media(min-width:768px){
+  body{font-size:16px}
+  .head{padding:28px 48px}
+  .hero{padding:120px 48px 96px}
+  .hero-in{grid-template-columns:1fr 150px;gap:64px;align-items:center}
+  .hero .copy{writing-mode:vertical-rl;height:460px;justify-self:center}
+  .hero h1{font-size:34px;line-height:2.1;letter-spacing:.34em}
+  .hero p{margin:0 28px 0 0;line-height:2.4}
+  .more{writing-mode:horizontal-tb;position:absolute;left:48px;bottom:40px;margin:0}
+  .concept{padding:150px 0}
+  .concept p{text-align:center;max-width:none}
+  .items{padding-top:150px}
+  .item,.item:nth-child(odd){grid-template-columns:1fr 1fr;gap:80px;margin-bottom:140px}
+  .item figure{max-width:360px;justify-self:end}
+  .item:nth-child(odd) figure{justify-self:start}
+  .item:nth-child(odd) .body{justify-self:end;text-align:left}
+  .item .body{max-width:340px}
+  .item h3{font-size:34px}
+  .ritual{padding:130px 0}.info{padding-block:150px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero figure,.hero .copy{animation:rise 1.6s ease both}
+  .hero .copy{animation-delay:.4s}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <a class="logo" href="#top">mélure</a>
+  <nav aria-label="ページ内">
+    <a href="#items">items</a><a href="#ritual">ritual</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-in">
+      <figure><img src="../images/hero.webp" width="1402" height="1122" alt="mélure の4つの容器。美容液、化粧水、クリーム、洗顔ジェルが光の中に並ぶ"></figure>
+      <div class="copy">
+        <h1>澄んでいく、<br>という手入れ。</h1>
+        <p>水のように、静かに。<br>肌にふれる四つのかたち。</p>
+      </div>
+    </div>
+    <a class="more en" href="#items">view items</a>
+  </section>
+
+  <section class="concept">
+    <div class="wrap">
+      <div class="drop" aria-hidden="true"></div>
+      <p class="en">concept</p>
+      <h2>足すよりも、澄ませる。</h2>
+      <p>朝いちばんの水にふれたときの、あの静けさ。</p>
+      <p>mélure は、落とす・与える・満たす・保つ、<br>四つの手順だけでできたスキンケアです。</p>
+      <p>容器は、水がそのまま立ちあがったようなかたち。<br>洗面台に置いたとき、光の通り道になります。</p>
+    </div>
+  </section>
+
+  <section class="items wrap" id="items">
+    <header>
+      <h2 class="en">items</h2>
+      <p>使う順に、四つ。</p>
+    </header>
+
+    <article class="item">
+      <figure><img src="../images/gel.webp" alt="cleansing gel の半透明のチューブ" loading="lazy"></figure>
+      <div class="body">
+        <p class="no">i.</p>
+        <h3>cleansing gel</h3>
+        <p class="jp">洗顔ジェル</p>
+        <p class="lead">まず、ほどく。</p>
+        <p class="txt">肌の汚れを落とすジェル。一日のはじまりと終わりに。</p>
+        <dl><div><dt>容量</dt><dd>準備中</dd></div><div><dt>価格</dt><dd>準備中</dd></div></dl>
+      </div>
+    </article>
+
+    <article class="item">
+      <figure><img src="../images/lotion.webp" alt="skin lotion の背の高いポンプボトル。中に細かな泡が見える" loading="lazy"></figure>
+      <div class="body">
+        <p class="no">ii.</p>
+        <h3>skin lotion</h3>
+        <p class="jp">化粧水</p>
+        <p class="lead">水を、手わたす。</p>
+        <p class="txt">洗顔後の肌に水分を与える化粧水。手のひらで、ゆっくりと。</p>
+        <dl><div><dt>容量</dt><dd>準備中</dd></div><div><dt>価格</dt><dd>準備中</dd></div></dl>
+      </div>
+    </article>
+
+    <article class="item">
+      <figure><img src="../images/serum.webp" alt="serum の小さなボトル" loading="lazy"></figure>
+      <div class="body">
+        <p class="no">iii.</p>
+        <h3>serum</h3>
+        <p class="jp">美容液</p>
+        <p class="lead">ひとしずく、満たす。</p>
+        <p class="txt">肌にうるおいを与える美容液。小さなボトルに、濃く。</p>
+        <dl><div><dt>容量</dt><dd>準備中</dd></div><div><dt>価格</dt><dd>準備中</dd></div></dl>
+      </div>
+    </article>
+
+    <article class="item">
+      <figure><img src="../images/cream.webp" alt="cream の丸い容器" loading="lazy"></figure>
+      <div class="body">
+        <p class="no">iv.</p>
+        <h3>cream</h3>
+        <p class="jp">保湿クリーム</p>
+        <p class="lead">そっと、とじる。</p>
+        <p class="txt">肌のうるおいを保つクリーム。手入れの最後に、ふたをするように。</p>
+        <dl><div><dt>容量</dt><dd>準備中</dd></div><div><dt>価格</dt><dd>準備中</dd></div></dl>
+      </div>
+    </article>
+  </section>
+
+  <section class="ritual" id="ritual">
+    <div class="wrap">
+      <h2>四つの、順番。</h2>
+      <ol>
+        <li><b>i.</b><div>落とす<span>cleansing gel</span></div></li>
+        <li><b>ii.</b><div>与える<span>skin lotion</span></div></li>
+        <li><b>iii.</b><div>満たす<span>serum</span></div></li>
+        <li><b>iv.</b><div>保つ<span>cream</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="info wrap">
+    <h2 class="en">information</h2>
+    <p>発売日・価格・取扱店は、ただいま準備中です。</p>
+    <p class="box">coming soon</p>
+  </section>
+</main>
+
+<footer>
+  <a class="logo" href="#top">mélure</a>
+  <p>このページは架空ブランドのデモサイトです。</p>
+</footer>
+</body>
+</html>
