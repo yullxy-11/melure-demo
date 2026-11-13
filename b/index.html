@@ -67,6 +67,38 @@ a:focus-visible{outline:1px solid var(--ice);outline-offset:4px}
 .info p{color:var(--dim);font-size:13px}
 footer{border-top:1px solid var(--line);padding:28px 24px 44px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--dim)}
 
+/* プロモーション用の部品 */
+.hbtn{font-size:12px;letter-spacing:.14em;text-decoration:none;border:1px solid var(--ice);color:var(--ice);border-radius:99px;padding:4px 16px}
+.hbtn:hover{background:var(--ice);color:var(--night)}
+.badge{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.14em;color:var(--frost);margin-bottom:14px}
+.badge b{font-family:var(--en);font-weight:400;letter-spacing:.2em;background:var(--ice);color:var(--night);border-radius:99px;padding:0 12px;font-size:11px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cta .btn{margin-top:0}
+.btn.fill{background:var(--ice);color:var(--night);font-family:var(--jp);font-weight:500;letter-spacing:.14em;text-transform:none;font-size:13px}
+.btn.fill:hover{background:var(--frost)}
+.btn.off{opacity:.5;cursor:not-allowed}
+.ticker{overflow:hidden;border-block:1px solid var(--line);padding:12px 0;white-space:nowrap}
+.ticker p{display:inline-block;font-family:var(--en);text-transform:uppercase;letter-spacing:.3em;font-size:12px;color:var(--ice)}
+.points{list-style:none;padding:0;margin-top:44px;border-top:1px solid var(--line)}
+.points li{display:grid;grid-template-columns:56px 1fr;padding:22px 0;border-bottom:1px solid var(--line)}
+.points b{font-family:var(--en);font-weight:200;font-size:28px;line-height:1.3;color:var(--ice)}
+.points h3{font-weight:500;font-size:17px;letter-spacing:.1em}
+.points p{margin:4px 0 0;font-size:14px}
+.sec{font-weight:400;font-size:clamp(20px,5.4vw,30px);letter-spacing:.14em;padding:56px 0 40px}
+.sec .en{display:block;font-size:11px;color:var(--ice);margin-bottom:10px}
+.set{background:var(--deep);padding:72px 0}
+.set .in{display:grid;gap:28px}
+.set figure img{aspect-ratio:5/4;object-fit:cover}
+.set .en{font-size:11px;color:var(--ice)}
+.set h2{font-weight:400;font-size:clamp(22px,6vw,34px);letter-spacing:.12em;line-height:1.6;margin:10px 0 14px}
+.set .txt{color:#B9C2CB;font-size:14px}
+.set dl{display:flex;gap:28px;margin:22px 0 4px;padding:14px 0;border-block:1px solid var(--line);font-size:13px}
+.set dl div{display:flex;gap:12px}.set dt{color:var(--dim)}
+.set .small{font-size:12px;color:var(--dim);margin-top:14px}
+.tolink{display:inline-block;margin-top:28px;color:var(--ice);font-size:13px;letter-spacing:.14em;text-underline-offset:6px}
+.bar{position:fixed;inset:auto 12px 12px 12px;z-index:6;display:flex;justify-content:space-between;align-items:center;background:var(--ice);color:var(--night);border-radius:99px;padding:10px 22px;text-decoration:none;font-size:13px;letter-spacing:.1em;font-weight:500;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+footer{padding-bottom:96px}
+
 @media(min-width:768px){
   body{font-size:16px}
   .head{padding:24px 48px}
@@ -79,12 +111,17 @@ footer{border-top:1px solid var(--line);padding:28px 24px 44px;display:flex;just
   .step .num{font-size:120px}
   .step h3{font-size:28px}
   .info{padding-block:180px}
+  .set{padding:140px 0}.set .in{grid-template-columns:1.1fr 1fr;gap:72px;align-items:center}
+  .bar{inset:auto 32px 28px auto;gap:28px}
+  .sec{padding:110px 0 20px}
 }
 @media(prefers-reduced-motion:no-preference){
   .hero img{animation:wake 3s ease both}
   .hero-copy{animation:up 1.4s .5s ease both}
   @keyframes wake{from{filter:brightness(.15) saturate(.6)}}
   @keyframes up{from{opacity:0;transform:translateY(20px)}}
+  .ticker p{animation:slide 40s linear infinite}
+  @keyframes slide{to{transform:translateX(-50%)}}
 }
 </style>
 </head>
@@ -92,32 +129,43 @@ footer{border-top:1px solid var(--line);padding:28px 24px 44px;display:flex;just
 
 <header class="head">
   <a class="logo" href="#top">mélure</a>
-  <span class="time">after 22:00</span>
+  <a class="hbtn" href="#set">4点セット</a>
 </header>
 
 <main id="top">
   <section class="hero">
     <img src="../images/hero.webp" width="1402" height="1122" alt="mélure の4つの容器。美容液、化粧水、クリーム、洗顔ジェルが並ぶ">
     <div class="hero-copy">
+      <p class="badge"><b>NEW</b>4つではじめる、夜のスキンケア</p>
       <p class="word" aria-hidden="true">mélure</p>
       <h1>一日を、ほどく水。</h1>
       <p>夜、洗面台の前の数分のために。</p>
-      <a class="btn" href="#steps">4 steps <span aria-hidden="true">↓</span></a>
+      <div class="cta">
+        <a class="btn fill" href="#set">4点セットを見る</a>
+        <a class="btn" href="#steps">4 steps <span aria-hidden="true">↓</span></a>
+      </div>
     </div>
   </section>
 
+  <div class="ticker" aria-hidden="true"><p>new — 4 steps — cleansing gel — skin lotion — serum — cream — coming soon — new — 4 steps — cleansing gel — skin lotion — serum — cream — coming soon — </p></div>
+
   <section class="concept">
     <div class="wrap">
-      <p class="en">concept</p>
+      <p class="en">why mélure</p>
       <div>
         <h2>がんばった顔を、<br>水にかえす。</h2>
-        <p>帰ってきて、明かりを少し落とす。蛇口をひねる。</p>
-        <p>mélure は、その数分を「作業」から「自分の時間」に変えるためのスキンケアです。手順は4つだけ。迷わない順番で、並べておけます。</p>
+        <p>帰ってきて、蛇口をひねる。その数分を「作業」から「自分の時間」に変えるスキンケアです。</p>
+        <ol class="points">
+          <li><b>01</b><div><h3>手順は、4つだけ。</h3><p>落とす・与える・満たす・保つ。それ以上は足しません。</p></div></li>
+          <li><b>02</b><div><h3>順番に、迷わない。</h3><p>使う順に並べておくだけ。疲れた夜でも考えずにすみます。</p></div></li>
+          <li><b>03</b><div><h3>出しっぱなしで、絵になる。</h3><p>水のような透明の容器。しまわなくていいから、続けやすい。</p></div></li>
+        </ol>
       </div>
     </div>
   </section>
 
   <section class="steps" id="steps">
+    <div class="wrap"><h2 class="sec"><span class="en">how to use</span>使う順に、4ステップ。</h2></div>
     <article class="step"><div class="wrap in">
       <div><p class="num">01</p><p class="verb">落とす</p></div>
       <figure><img src="../images/gel.webp" alt="cleansing gel の半透明のチューブ" loading="lazy"></figure>
@@ -163,12 +211,29 @@ footer{border-top:1px solid var(--line);padding:28px 24px 44px;display:flex;just
     </div></article>
   </section>
 
+  <section class="set" id="set">
+    <div class="wrap in">
+      <figure><img src="../images/hero.webp" alt="mélure の4商品がそろった写真" loading="lazy"></figure>
+      <div>
+        <p class="en">first set</p>
+        <h2>はじめての、4点セット。</h2>
+        <p class="txt">cleansing gel／skin lotion／serum／cream。<br>今夜から、ひととおり。</p>
+        <dl><div><dt>価格</dt><dd>準備中</dd></div><div><dt>発売日</dt><dd>準備中</dd></div></dl>
+        <span class="btn fill off" role="link" aria-disabled="true">オンラインストア（準備中）</span>
+        <p class="small">発売の準備ができしだい、このページでお知らせします。</p>
+      </div>
+    </div>
+  </section>
+
   <section class="info wrap">
     <p class="en">information</p>
     <h2>coming soon</h2>
     <p>発売日・価格・取扱店は、ただいま準備中です。</p>
+    <p><a class="tolink" href="../a/index.html">ブランドのことを読む →</a></p>
   </section>
 </main>
+
+<a class="bar" href="#set"><span>mélure　4点セット</span><b>見る →</b></a>
 
 <footer>
   <span>mélure</span>

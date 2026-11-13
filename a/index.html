@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>mélure｜澄んでいく、という手入れ。</title>
-<meta name="description" content="mélure（メリュール）は、水のように静かなスキンケア。洗顔ジェル、化粧水、美容液、クリームの4つ。">
+<meta name="description" content="mélure（メリュール）のブランドサイト。名前のこと、かたちのこと、三つの約束。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
@@ -82,6 +82,25 @@ a:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
 footer{border-top:1px solid var(--line);padding:32px 24px 48px;text-align:center;font-size:11px;color:var(--mist)}
 footer .logo{display:block;color:var(--ink);margin-bottom:12px}
 
+/* story（ブランドの話） */
+.story{padding:40px 0 0}
+.chap{max-width:26em;margin:0 auto;padding:72px 0}
+.chap .en{color:var(--mist);font-size:13px;font-style:italic;letter-spacing:.16em}
+.chap h2{font-weight:400;font-size:21px;letter-spacing:.24em;margin:14px 0 30px}
+.chap p{margin-bottom:1.6em}
+.band{position:relative;margin:24px 0}
+.band img{height:68svh;min-height:380px;object-fit:cover;object-position:8% 60%}
+.band figcaption{position:absolute;right:24px;top:32px;writing-mode:vertical-rl;font-size:17px;letter-spacing:.34em;line-height:2.2;color:var(--ink)}
+.vows{list-style:none;padding:0}
+.vows li{padding:22px 0;border-top:1px solid var(--line)}
+.vows li:last-child{border-bottom:1px solid var(--line)}
+.vows b{display:block;font-weight:400;font-size:17px;letter-spacing:.24em}
+.vows span{font-size:13px;color:var(--mist)}
+.info .last{font-size:clamp(16px,4.5vw,28px);letter-spacing:.2em;margin:0;white-space:nowrap}
+.info .sign{font-size:20px;color:var(--mist);margin-top:18px}
+.info .more{margin-top:56px;font-size:14px;letter-spacing:.24em}
+.info .note{font-size:12px;color:var(--mist);margin-top:14px}
+
 @media(min-width:768px){
   body{font-size:16px}
   .head{padding:28px 48px}
@@ -100,6 +119,9 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
   .item:nth-child(odd) .body{justify-self:end;text-align:left}
   .item .body{max-width:340px}
   .item h3{font-size:34px}
+  .chap{padding:120px 0}.chap h2{font-size:26px}
+  .band figcaption{right:12%;top:80px;font-size:22px}
+  .info .more{position:static;writing-mode:horizontal-tb}
   .ritual{padding:130px 0}.info{padding-block:150px}
 }
 @media(prefers-reduced-motion:no-preference){
@@ -114,7 +136,7 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
 <header class="head">
   <a class="logo" href="#top">mélure</a>
   <nav aria-label="ページ内">
-    <a href="#items">items</a><a href="#ritual">ritual</a>
+    <a href="#story">story</a><a href="#items">forms</a>
   </nav>
 </header>
 
@@ -127,7 +149,7 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
         <p>水のように、静かに。<br>肌にふれる四つのかたち。</p>
       </div>
     </div>
-    <a class="more en" href="#items">view items</a>
+    <a class="more en" href="#story">read the story</a>
   </section>
 
   <section class="concept">
@@ -141,10 +163,45 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
     </div>
   </section>
 
+  <section class="story" id="story">
+    <div class="wrap">
+      <article class="chap">
+        <p class="en">i. name</p>
+        <h2>名前のこと。</h2>
+        <p>混ざりあって、やがて澄む。<br>その時間に、名前をつけました。</p>
+        <p>mélure（メリュール）。<br>声に出すと、水の音がすこし残ります。</p>
+      </article>
+    </div>
+
+    <figure class="band">
+      <img src="../images/hero.webp" alt="" loading="lazy">
+      <figcaption>光が通るものを、<br>洗面台に。</figcaption>
+    </figure>
+
+    <div class="wrap">
+      <article class="chap">
+        <p class="en">ii. form</p>
+        <h2>かたちのこと。</h2>
+        <p>まっすぐな線が、一本もありません。</p>
+        <p>手でにぎった水のあとを、<br>そのまま残したようなかたち。<br>持つたびに、指の置き場所が見つかります。</p>
+      </article>
+
+      <article class="chap">
+        <p class="en">iii. promise</p>
+        <h2>三つの、約束。</h2>
+        <ul class="vows">
+          <li><b>足しすぎない。</b><span>手順は四つ。それより増やしません。</span></li>
+          <li><b>急がせない。</b><span>肌にふれる数分を、作業にしません。</span></li>
+          <li><b>語りすぎない。</b><span>感じることは、使う人にゆだねます。</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
   <section class="items wrap" id="items">
     <header>
-      <h2 class="en">items</h2>
-      <p>使う順に、四つ。</p>
+      <h2 class="en">four forms</h2>
+      <p>四つの、かたち。</p>
     </header>
 
     <article class="item">
@@ -155,7 +212,6 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
         <p class="jp">洗顔ジェル</p>
         <p class="lead">まず、ほどく。</p>
         <p class="txt">肌の汚れを落とすジェル。一日のはじまりと終わりに。</p>
-        <dl><div><dt>容量</dt><dd>準備中</dd></div><div><dt>価格</dt><dd>準備中</dd></div></dl>
       </div>
     </article>
 
@@ -167,7 +223,6 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
         <p class="jp">化粧水</p>
         <p class="lead">水を、手わたす。</p>
         <p class="txt">洗顔後の肌に水分を与える化粧水。手のひらで、ゆっくりと。</p>
-        <dl><div><dt>容量</dt><dd>準備中</dd></div><div><dt>価格</dt><dd>準備中</dd></div></dl>
       </div>
     </article>
 
@@ -179,7 +234,6 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
         <p class="jp">美容液</p>
         <p class="lead">ひとしずく、満たす。</p>
         <p class="txt">肌にうるおいを与える美容液。小さなボトルに、濃く。</p>
-        <dl><div><dt>容量</dt><dd>準備中</dd></div><div><dt>価格</dt><dd>準備中</dd></div></dl>
       </div>
     </article>
 
@@ -191,7 +245,6 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
         <p class="jp">保湿クリーム</p>
         <p class="lead">そっと、とじる。</p>
         <p class="txt">肌のうるおいを保つクリーム。手入れの最後に、ふたをするように。</p>
-        <dl><div><dt>容量</dt><dd>準備中</dd></div><div><dt>価格</dt><dd>準備中</dd></div></dl>
       </div>
     </article>
   </section>
@@ -209,9 +262,10 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
   </section>
 
   <section class="info wrap">
-    <h2 class="en">information</h2>
-    <p>発売日・価格・取扱店は、ただいま準備中です。</p>
-    <p class="box">coming soon</p>
+    <p class="last">澄んでいく、という手入れ。</p>
+    <p class="en sign">mélure</p>
+    <a class="more en" href="../b/index.html">products &amp; how to</a>
+    <p class="note">商品と使い方は、プロモーションサイトへ。</p>
   </section>
 </main>
 
