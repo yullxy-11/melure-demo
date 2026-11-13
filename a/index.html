@@ -52,11 +52,9 @@ a:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
 .items>header{text-align:center;margin-bottom:64px}
 .items>header .en{font-size:28px;letter-spacing:.3em}
 .items>header p{color:var(--mist);font-size:13px}
-.item{display:grid;grid-template-columns:42% 1fr;gap:28px;align-items:center;margin-bottom:80px}
-.item:nth-child(odd){grid-template-columns:1fr 42%}
-.item:nth-child(odd) figure{order:2}
+.item{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;margin-bottom:80px}
 .item figure{background:#DCE2E8}
-.item figure img{aspect-ratio:3/4;object-fit:cover}
+.item figure img{aspect-ratio:1/1;object-fit:contain}
 .item .no{font-family:var(--en);font-style:italic;color:var(--mist);font-size:15px;letter-spacing:.1em}
 .item h3{font-family:var(--en);font-weight:300;font-size:21px;letter-spacing:.14em;line-height:1.4;margin:4px 0 2px}
 .item .jp{font-size:12px;color:var(--mist);letter-spacing:.2em}
@@ -114,7 +112,8 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
   .concept p{text-align:center;max-width:none}
   .items{padding-top:150px}
   .item,.item:nth-child(odd){grid-template-columns:1fr 1fr;gap:80px;margin-bottom:140px}
-  .item figure{max-width:360px;justify-self:end}
+  .item figure{width:100%;max-width:440px;justify-self:end}
+  .item:nth-child(odd) figure{order:2}
   .item:nth-child(odd) figure{justify-self:start}
   .item:nth-child(odd) .body{justify-self:end;text-align:left}
   .item .body{max-width:340px}
