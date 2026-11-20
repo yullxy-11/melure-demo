@@ -93,6 +93,16 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
 .origin dt{color:var(--mist);letter-spacing:.3em}
 .origin dd{margin:0}
 .origin i{font-family:var(--en);font-style:italic;font-size:15px;letter-spacing:.06em}
+/* topics */
+.topics{padding-block:96px 0}
+.topics h2{font-size:28px;letter-spacing:.3em;text-align:center;margin-bottom:40px}
+.topics ul{list-style:none;padding:0;max-width:640px;margin:0 auto;border-top:1px solid var(--line)}
+.topics li{display:grid;grid-template-columns:1fr;gap:2px;padding:18px 4px;border-bottom:1px solid var(--line)}
+.topics time,.topics .soon{font-family:var(--en);font-size:14px;letter-spacing:.16em;color:var(--mist)}
+.topics .soon{font-family:var(--jp);font-size:12px}
+.topics a,.topics p{font-size:14px;line-height:1.9;margin:0}
+.topics a{text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .4s}
+.topics a:hover{background-size:100% 1px}
 .vows{list-style:none;padding:0}
 .vows li{padding:22px 0;border-top:1px solid var(--line)}
 .vows li:last-child{border-bottom:1px solid var(--line)}
@@ -114,6 +124,8 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
   .more{writing-mode:horizontal-tb;position:absolute;left:48px;bottom:40px;margin:0}
   .concept{padding:150px 0}
   .concept p{text-align:center;max-width:none}
+  .topics{padding-top:150px}
+  .topics li{grid-template-columns:9em 1fr;align-items:baseline;padding:20px 8px}
   .items{padding-top:150px}
   .item,.item:nth-child(odd){grid-template-columns:1fr 1fr;gap:80px;margin-bottom:140px}
   .item figure{width:100%;max-width:440px;justify-self:end}
@@ -203,6 +215,16 @@ footer .logo{display:block;color:var(--ink);margin-bottom:12px}
         </ul>
       </article>
     </div>
+  </section>
+
+  <section class="topics wrap" id="topics">
+    <h2 class="en">topics</h2>
+    <ul>
+      <li><time datetime="2026-11-20">2026.11.20</time><a href="#story">「名前のこと」に、mélure の由来をくわえました。</a></li>
+      <li><time datetime="2026-11-20">2026.11.20</time><a href="#items">四つのかたちの写真を、あたらしくしました。</a></li>
+      <li><time datetime="2026-11-13">2026.11.13</time><p>ブランドサイトを公開しました。</p></li>
+      <li><span class="soon">準備中</span><p>四つの商品の発売日・価格は、決まりしだいお知らせします。</p></li>
+    </ul>
   </section>
 
   <section class="items wrap" id="items">
